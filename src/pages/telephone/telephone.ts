@@ -21,8 +21,9 @@ export class TelephonePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TelephonePage');
   }
-  tel(phone){
-    window.open('tel:'+phone);
+  tel() {
+    let phone = '1584';
+    window.open('tel:' + phone);
   }
 
 }
