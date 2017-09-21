@@ -16,21 +16,21 @@
 <ion-content padding>
   <ion-item>
     <ion-label floating>บัตรประชาชน</ion-label>
-    <ion-input type="text" [(ngModel)]="id"></ion-input>
+    <ion-input type="text" [(ngModel)]="complainData.id"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>เบอร์โทร</ion-label>
-    <ion-input type="number" [(ngModel)]="phone"></ion-input>
+    <ion-input type="number" [(ngModel)]="complainData.phone"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>ทะเบียนรถ</ion-label>
-    <ion-input type="text" [(ngModel)]="carid"></ion-input>
+    <ion-input type="text" [(ngModel)]="complainData.carid"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-textarea placeholder="รายละเอียด"></ion-textarea>
+    <ion-textarea placeholder="รายละเอียด" [(ngModel)]="complainData.detail"></ion-textarea>
   </ion-item>
   
-    <button ion-button full>ส่งเรื่องร้องเรียน</button>
+    <button ion-button full (click)="sentData(complainData)">ส่งเรื่องร้องเรียน</button>
 
 </ion-content>
