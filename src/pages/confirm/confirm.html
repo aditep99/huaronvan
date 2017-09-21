@@ -21,16 +21,19 @@
         คุณได้แจ้งเรื่องร้องเรียนเสร็จเรียบร้อย !
       </ion-card-title>
       <h2>ข้อมูลหัวร้อนโดยสรุป</h2>
-      <p>คุณ แอพหัวร้อน แวน</p>
+      <p>ID : {{confirmData.id}}</p>
+      <p>Tel : {{confirmData.phone}}</p>
+      <p>เลขทะเบียน : {{confirmData.cardid}}</p>
       <ion-row>
         <ion-col>
-          <ion-note>รายละเอียดเรื่องหัวร้อนในครั้งนี้</ion-note>
+          <p>รายละเอียดเรื่องหัวร้อนในครั้งนี้</p>
+          <ion-note>{{confirmData.detail}}</ion-note>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col text-right>
           <ion-note>
-            เวลา 11 นาฬิกา ตอนบ่ายๆ
+            เวลา {{time | date: 'dd-MM-yyyy: hh:mm'}} 
           </ion-note>
         </ion-col>
       </ion-row>

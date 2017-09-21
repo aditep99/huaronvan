@@ -14,8 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'confirm.html',
 })
 export class ConfirmPage {
-  confirmData = {};
-
+  confirmData = {
+    id: "",
+    phone: "",
+    cardid: "",
+    detail: ""
+  };
+  time = Date.now();
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.confirmData = this.navParams.data;
   }
@@ -24,7 +29,7 @@ export class ConfirmPage {
     console.log('ionViewDidLoad ConfirmPage');
   }
 
-  confrim(){
+  confrim() {
     this.navCtrl.popToRoot();
   }
 
