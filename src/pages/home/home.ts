@@ -10,5 +10,10 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  gotoComplain() {
+    this.navCtrl.push('ComplainPage');
+  }
+  gotoTelephone(){
+    this.navCtrl.push('TelephonePage');    
+  }
 }
