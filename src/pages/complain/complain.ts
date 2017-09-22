@@ -1,6 +1,7 @@
+import { Http } from '@angular/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, IonicModule } from 'ionic-angular';
-
+import 'rxjs/add/operator/map'
 /**
  * Generated class for the ComplainPage page.
  *
@@ -15,23 +16,33 @@ import { IonicPage, NavController, NavParams, IonicModule } from 'ionic-angular'
 })
 export class ComplainPage {
 
-  complainData = { 
+  complainData = {
     id: "",
     phone: "",
-    cardid:"",
-    detail:""
+    cardid: "",
+    detail: ""
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.complainData = this.navParams.data;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
+    // this.complainData = this.navParams.data;
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ComplainPage');
   }
 
-  sentData(complainData){
-    this.navCtrl.push("ConfirmPage", complainData);
+  sentData(complainData) {
+    // this.http.post('http://localhost:63434/api/Complain', complainData)
+    //   .map((res) => {
+    //     return res.json()
+    //   })
+    //   .subscribe((data) => {
+    //     complainData = data;
+    //     this.navCtrl.push("ConfirmPage", complainData);
+    //     console.log(complainData);
+    //   });
+      this.navCtrl.push("ConfirmPage", complainData);
   }
 
 }

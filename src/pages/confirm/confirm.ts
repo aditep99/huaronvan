@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 /**
  * Generated class for the ConfirmPage page.
  *
@@ -21,8 +22,17 @@ export class ConfirmPage {
     detail: ""
   };
   time = Date.now();
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
     this.confirmData = this.navParams.data;
+    // let url = 'http://localhost:51390/api/Complain/1234567891234';
+    // this.http.get(url)
+    //   .map((res) => {
+    //     return res.json()
+    //   })
+    //   .subscribe((data) => {
+    //     this.confirmData = data;
+    //     console.log(this.confirmData);
+    //   });
   }
 
   ionViewDidLoad() {
